@@ -1,0 +1,33 @@
+# Whitelist approach: ignore everything, then re-include config worth versioning
+/*
+
+!.gitignore
+!README.md
+!settings.json
+!statusline.js
+!launch.json
+
+!agents/
+!commands/
+!hooks/
+!skills/
+
+# plugins: keep the marketplace registry, not the cloned repos
+!plugins/
+plugins/*
+!plugins/known_marketplaces.json
+
+# projects: keep only the memory store, drop all session transcripts
+!projects/
+projects/*
+!projects/C--Users-darga/
+projects/C--Users-darga/*
+!projects/C--Users-darga/memory/
+
+# never commit these
+.credentials.json
+*.credentials.json
+.claude.json
+settings.local.json
+*token*
+*secret*
